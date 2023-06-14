@@ -23,6 +23,25 @@ class Channel:
     def __repr__(self):
         return self.title, self.description, self.url, self.subscriberCount, self.video_count, self.viewCount
 
+    def __str__(self):
+        """выводим название канала и ссылку на него"""
+        return f"{self.title} ({self.url})"
+
+    def __add__(self, other):
+        """"""
+        return int(self.subscriberCount) + int(other.subscriberCount)
+
+    def __sub__(self, other):
+        return int(self.subscriberCount) - int(other.subscriberCount)
+
+    def __sub__(self, other):
+        return int(other.subscriberCount) - int(self.subscriberCount)
+
+    def __gt__(self, other):
+        return int(self.subscriberCount) > int(other.subscriberCount)
+
+    def __ge__(self, other):
+        return int(self.subscriberCount) >= int(other.subscriberCount)
 
 
     def print_info(self) -> None:
