@@ -21,7 +21,7 @@ class Channel:
         self.viewCount = channel['items'][0]['statistics']['viewCount']
 
     def __repr__(self):
-        return self.title, self.description, self.url, self.subscriberCount, self.video_count, self.viewCount
+         self.title, self.description, self.url, self.subscriberCount, self.video_count, self.viewCount
 
     def __str__(self):
         """выводим название канала и ссылку на него"""
